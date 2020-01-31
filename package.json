@@ -1,0 +1,47 @@
+{
+  "name": "@yst/vue-slidable",
+  "version": "0.1.0",
+  "description": "Vue component-based utility for showing/hiding an element with "sliding" effect",
+  "main": "dist/vue-slidable.min.js",
+  "module": "src/index.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yst138451/vue-slidable.git"
+  },
+  "keywords": [
+    "vue",
+    "slide",
+    "slidable"
+  ],
+  "author": "yst <kodemoar@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yst138451/vue-slidable/issues"
+  },
+  "homepage": "https://github.com/yst138451/vue-slidable#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "autoprefixer": "^9.7.4",
+    "babel-loader": "^8.0.6",
+    "cross-env": "^7.0.0",
+    "kebab-case": "^1.0.0",
+    "lodash.debounce": "^4.0.8",
+    "node-sass": "^4.13.1",
+    "postcss-easings": "^2.0.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.2",
+    "vue-loader": "^15.8.3",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  }
+}
