@@ -25,7 +25,7 @@ Vue.use(Slidable);
 Vue.use(Slidable, {});
 ```
 
-⚠️ **Note**: This only provides the functionalities, so the styling is completely left up to you.
+⚠️ **Note**: This only provides the functionalities, so the styling is entirely up to you.
 
 ## Options
 
