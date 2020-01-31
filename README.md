@@ -4,7 +4,7 @@ Vue component-based utility for showing/hiding an element with "sliding" effect.
 
 (Based on David Walsh's [Pure CSS Slide Up and Slide Down](https://davidwalsh.name/css-slide))
 
-<img src="static/images/preview.gif" />
+<img src="https://i.imgur.com/pJA6k7E.gif" />
 </div>
 
 ## Getting Started
