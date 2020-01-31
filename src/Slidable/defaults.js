@@ -1,4 +1,4 @@
 export const defaultEasing = {
-  duration: '400ms',
+  duration: 300,
   timingFunction: 'easeOutQuart'
 }

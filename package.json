@@ -1,7 +1,7 @@
 {
   "name": "@yst/vue-slidable",
-  "version": "0.1.0",
-  "description": "Vue component-based utility for showing/hiding an element with "sliding" effect",
+  "version": "0.1.1",
+  "description": "Vue component-based utility for showing/hiding an element with \"sliding\" effect",
   "main": "dist/vue-slidable.min.js",
   "module": "src/index.js",
   "scripts": {
@@ -32,6 +32,7 @@
     "autoprefixer": "^9.7.4",
     "babel-loader": "^8.0.6",
     "cross-env": "^7.0.0",
+    "css-loader": "^3.4.2",
     "kebab-case": "^1.0.0",
     "lodash.debounce": "^4.0.8",
     "node-sass": "^4.13.1",

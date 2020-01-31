@@ -31,7 +31,7 @@
         type: Object,
         default: () => ({})
       },
-      resizeWatcher: {
+      updateOnResize: {
         type: Boolean,
         default: true
       },
@@ -58,11 +58,17 @@
 
     computed: {
       computedEasing() {
+        const easing = {
+          ...defaultEasing,
+          ...this.easing
+        }
+
+        if (typeof easing.duration === 'number') {
+          easing.duration = easing.duration + 'ms';
+        }
+
         return Object
-          .entries({
-            ...defaultEasing,
-            ...this.easing
-          })
+          .entries(easing)
           .reduce((seed, [name, value]) => (
             seed[`--easing-${kebabCase(name)}`] = value, seed
           ), {});
@@ -80,7 +86,7 @@
     },
 
     created() {
-      if (this.resizeWatcher) {
+      if (this.updateOnResize) {
         window.addEventListener('resize', this.resize, { passive: this.passive });
 
         if (typeof this.debounce === 'number') {
@@ -94,7 +100,7 @@
     },
 
     beforeDestroy() {
-      if (this.resizeWatcher) {
+      if (this.updateOnResize) {
         window.removeEventListener('resize', this.resize);
       }
     },
