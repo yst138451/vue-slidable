@@ -7,9 +7,16 @@ Vue component-based utility for showing/hiding an element with "sliding" effect.
 <img src="https://i.imgur.com/pJA6k7E.gif" />
 </div>
 
+## Table of Contents
+
+- [Getting Started](#getting-started)
+- [Options](#options)
+- [Events](#events)
+- [Example](#example)
+
 ## Getting Started
 
-```bash
+```
 npm install @yst/vue-slidable
 ```
 
@@ -22,7 +29,14 @@ import Slidable from '@yst/vue-slidable';
 Vue.use(Slidable);
 
 // With options
-Vue.use(Slidable, {});
+Vue.use(Slidable, {
+  /**
+   * The globally registered name
+   * @example
+   * <slidable></slidable>
+   */
+  name: 'slidable'
+});
 ```
 
 ⚠️ **Note**: This only provides the functionalities, so the styling is entirely up to you.
@@ -53,7 +67,7 @@ The slidable state basing on CSS [`max-height`](https://developer.mozilla.org/en
 - type: `string`
 - default: `easeOutQuart`
 
-For more easings, see [postcss-easings](https://github.com/postcss/postcss-easings/blob/master/index.js).
+For more easings see [postcss-easings](https://github.com/postcss/postcss-easings/blob/master/index.js).
 
 #### `updateOnResize`
 
@@ -64,8 +78,8 @@ Recalculates the container's `max-height` on [`window.resize`](https://developer
 
 #### `debounce`
 
-- type: `number` | `boolean`,
-- default: 400
+- type: `number` | `boolean`
+- default: `400`
 
 [Debounces](https://lodash.com/docs/4.17.15#debounce) the frequency of the component updates on data change.
 
@@ -85,14 +99,14 @@ See [`passive` event listener](https://developer.mozilla.org/en-US/docs/Web/API/
 }
 ```
 
-### Events
+## Events
 
 - `@expanded`
   Called when the containing component has opened/expanded (slides down).
 - `@collapsed`
-  Called when the containing component has closed/expanded (slides up).
+  Called when the containing component has closed/collapsed (slides up).
 
-### Example
+## Example
 
 ```html
 <h3 @click="toggle">Click to expand/collapse</h3>
@@ -119,4 +133,5 @@ export default {
 ```
 
 ## License
+
 [MIT](http://opensource.org/licenses/MIT)
