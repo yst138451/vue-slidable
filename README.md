@@ -1,8 +1,8 @@
 <div align="center">
 <h1>Vue Slidable</h1>
-Vue component-based utility for showing/hiding an element with "sliding" effect.
+Vue component-based utility for showing/hiding an element with "sliding" effect
 
-(Based on David Walsh's [Pure CSS Slide Up and Slide Down](https://davidwalsh.name/css-slide))
+(based on David Walsh's [Pure CSS Slide Up and Slide Down](https://davidwalsh.name/css-slide))
 
 <img src="https://i.imgur.com/pJA6k7E.gif" />
 </div>
@@ -50,7 +50,7 @@ Vue.use(Slidable, {
 - type: `boolean`
 - default: `false`
 
-The slidable state basing on CSS [`max-height`](https://developer.mozilla.org/en-US/docs/Web/CSS/max-height) property.
+The component's state (expanded/collapsed) basing on CSS [`max-height`](https://developer.mozilla.org/en-US/docs/Web/CSS/max-height) property.
 
 #### `tag`
 
@@ -111,7 +111,7 @@ See [`passive` event listener](https://developer.mozilla.org/en-US/docs/Web/API/
 ```html
 <h3 @click="toggle">Click to expand/collapse</h3>
 
-<slidable tag="ul" v-model="show">
+<slidable tag="ul" v-model="expanded">
   <li>first item</li>
   <li>second item</li>
   <li>third item</li>
