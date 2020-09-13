@@ -1,6 +1,6 @@
 {
   "name": "@yst/vue-slidable",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Vue component-based utility for showing/hiding an element with \"sliding\" effect",
   "main": "dist/vue-slidable.min.js",
   "module": "src/index.js",
@@ -10,6 +10,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yst138451/vue-slidable.git"
