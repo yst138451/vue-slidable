@@ -1,6 +1,6 @@
 {
   "name": "@yst/vue-slidable",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "Vue component-based utility for showing/hiding an element with \"sliding\" effect",
   "main": "dist/vue-slidable.min.js",
   "module": "src/index.js",
@@ -16,6 +16,7 @@
   },
   "keywords": [
     "vue",
+    "component",
     "slide",
     "slidable"
   ],

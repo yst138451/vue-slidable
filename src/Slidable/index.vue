@@ -31,9 +31,18 @@
         type: Object,
         default: () => ({})
       },
+      /**
+       * @deprecated
+       * This will be removed in future release and be enabled by default (it has been, hence the deprecation plan). 
+       * Please use `disableResizeUpdate` to disable it. 
+       */
       updateOnResize: {
         type: Boolean,
         default: true
+      },
+      disableResizeUpdate: {
+        type: Boolean,
+        default: false
       },
       debounce: {
         type: [Number, Boolean],
@@ -81,12 +90,13 @@
           ? this.$el.scrollHeight + 'px'
           : 0;
 
+        this.$emit('change', this.expanded);
         this.$emit(this.expanded ? 'expanded' : 'collapsed');
       }
     },
 
-    created() {
-      if (this.updateOnResize) {
+    mounted() {
+      if (!this.disableResizeUpdate && this.updateOnResize) {
         window.addEventListener('resize', this.resize, { passive: this.passive });
 
         if (typeof this.debounce === 'number') {
@@ -99,8 +109,8 @@
       }
     },
 
-    beforeDestroy() {
-      if (this.updateOnResize) {
+    destroyed() {
+      if (!this.disableResizeUpdate && this.updateOnResize) {
         window.removeEventListener('resize', this.resize);
       }
     },

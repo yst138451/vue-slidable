@@ -16,11 +16,19 @@ Vue component-based utility for showing/hiding an element with "sliding" effect
 
 ## Getting Started
 
-```
-npm install @yst/vue-slidable
+### Install
+
+#### NPM
+```bash
+$ npm install @yst/vue-slidable
 ```
 
-Import and `use` it:
+#### Yarn
+```bash
+$ yarn add @yst/vue-slidable
+```
+
+Import and `use` it (as a plugin):
 
 ```js
 import Vue from 'vue';
@@ -28,7 +36,7 @@ import Slidable from '@yst/vue-slidable';
 
 Vue.use(Slidable);
 
-// With options
+// Or, with options
 Vue.use(Slidable, {
   /**
    * The globally registered name
@@ -39,7 +47,7 @@ Vue.use(Slidable, {
 });
 ```
 
-⚠️ **Note**: This only provides the functionalities, so the styling is entirely up to you.
+⚠️ **Note**: This only provides the sliding functionalities, so the styling is entirely up to you.
 
 ## Options
 
@@ -50,7 +58,7 @@ Vue.use(Slidable, {
 - type: `boolean`
 - default: `false`
 
-The component's state (expanded/collapsed) basing on CSS [`max-height`](https://developer.mozilla.org/en-US/docs/Web/CSS/max-height) property.
+The component's state (expanded/collapsed) based on CSS [`max-height`](https://developer.mozilla.org/en-US/docs/Web/CSS/max-height) property.
 
 #### `tag`
 
@@ -70,11 +78,19 @@ The component's state (expanded/collapsed) basing on CSS [`max-height`](https://
 For more easings see [postcss-easings](https://github.com/postcss/postcss-easings/blob/master/index.js).
 
 #### `updateOnResize`
+(⚠ Deprecated in favor of `disableResizeUpdate`).
 
 - type: `boolean`
 - default: `true`
 
 Recalculates the container's `max-height` on [`window.resize`](https://developer.mozilla.org/en-US/docs/Web/API/Window/resize_event).
+
+#### `disableResizeUpdate`
+
+- type: `boolean`
+- default: `false`
+
+Disables updating container's `max-height` on `window.resize`. 
 
 #### `debounce`
 
@@ -131,7 +147,3 @@ export default {
   }
 };
 ```
-
-## License
-
-[MIT](http://opensource.org/licenses/MIT)
