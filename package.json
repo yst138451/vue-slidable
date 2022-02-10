@@ -41,7 +41,7 @@
     "babel-loader": "^8.0.6",
     "cross-env": "^7.0.0",
     "css-loader": "^3.4.2",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "postcss-easings": "^2.0.0",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^8.0.2",
